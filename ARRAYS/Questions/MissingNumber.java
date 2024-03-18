@@ -25,14 +25,12 @@ n == nums.length
 0 <= nums[i] <= n
 All the numbers of nums are unique.
  */
+// 1st Approach using math operations
 
 // Time compexity : O(n);
 // space complexity : O(1)
 // import java.util.Arrays;
 public class MissingNumber {
-
-    // 1st Approach using math operations
-
     public static int missingNumber(int arr[]){
         int n = arr.length;
         int sum = 0;
