@@ -20,14 +20,13 @@ n == nums.length
 nums[i] is either 0, 1, or 2.
  */
 
+// 1st Approach: Counting Method
+// Time complexity : O(2n)
+ // space complexity : O(1)
 public class SortColors {
     // public static void sortColors(int arr[]){
 
-        // Method 1: Counting Method
-
-        // int count0 = 0;
-        // int count1 = 0;
-        // int count2 = 0;
+        // int count0 = 0,count1 = 0,count2 = 0;
 
         // for(int i = 0;i<arr.length;i++){
         //     if(arr[i]==0){
@@ -46,7 +45,7 @@ public class SortColors {
         // for(int i = count0;i<count0+count1;i++){
         //     arr[i] = 1;
         // }
-        // for(int i = +count0+count1;i<arr.length;i++){
+        // for(int i = count0+count1;i<arr.length;i++){
         //     arr[i] = 2;
         // }
         // for(int i :arr){
@@ -55,7 +54,10 @@ public class SortColors {
         // System.out.println();
         // }
 
-        // 2nd Approach: Two pointer
+    // 2nd Approach: Two pointer
+    // Time complexity : O(n)
+    // space complexity : O(1)
+
         static void swap(int[] arr,int l,int r){
             int temp = arr[l];
             arr[l] = arr[r];
