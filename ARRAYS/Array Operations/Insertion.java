@@ -20,10 +20,11 @@ public class Insertion {
 
         int newArray[] = new int[n+1];
         for(int i = 0;i<n;i++){
-            newArray[i+1] = arr[i];
+            newArray[i+1] = arr[i]; // for insert at front
+            // newArray[i] = arr[i];  // for insert at end
         }
-        // newArray[0] = key;
-        newArray[n] = key;
+        newArray[0] = key; // for insert at front
+        // newArray[n] = key;   // for insert at end
         arr = newArray;
         System.out.print("Array After insertion at front: ");
         for(int i: arr){
