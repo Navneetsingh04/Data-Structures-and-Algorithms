@@ -2,7 +2,7 @@
 Given two integers, dividend and divisor, implement a function to divide dividend by divisor using binary search.
 */
 
-// Time complexity : O(logn)
+// Time complexity : O(logdividend)
 
 public class Divide {
     public static int getQuotient(int divisor,int dividend){
