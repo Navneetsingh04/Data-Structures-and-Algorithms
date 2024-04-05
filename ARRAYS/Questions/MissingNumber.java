@@ -30,17 +30,18 @@ All the numbers of nums are unique.
 // Time compexity : O(n);
 // space complexity : O(1)
 // import java.util.Arrays;
-public class MissingNumber {
-    public static int missingNumber(int arr[]){
-        int n = arr.length;
-        int sum = 0;
-        for(int i = 0;i<n;i++){
-            sum += arr[i];
-        }
-        int totalSum = (n*(n+1))/2;
-        int ans = totalSum-sum;
-        return ans;
-    }
+
+// public class MissingNumber {
+//     public static int missingNumber(int arr[]){
+//         int n = arr.length;
+//         int sum = 0;
+//         for(int i = 0;i<n;i++){
+//             sum += arr[i];
+//         }
+//         int totalSum = (n*(n+1))/2;
+//         int ans = totalSum-sum;
+//         return ans;
+//     }
 
     // 2nd Approach using sorting
     // Time compexity : O(nlogn);
@@ -55,6 +56,31 @@ public class MissingNumber {
     //     return 0;
     // }
 
+    //3rd Approach:  using cyclic sort 
+
+    // Time complexity: O(n)
+    // Space complexity : O(1) 
+    public class MissingNumber {
+    public static int missingNumber(int arr[]){
+        int i = 0;
+        while(i<arr.length){
+            int correct = arr[i];
+            if(arr[i] <arr.length && arr[i] != arr[correct]){
+                int temp = arr[i];
+                arr[i] = arr[correct];
+                arr[correct] = temp;
+            }
+            else{
+                i++;
+            }
+        }
+        for(i = 0;i<arr.length;i++){
+            if(arr[i] != i){
+                return i;
+            }
+        }
+        return arr.length;
+        }
     public static void main(String[] args) {
         int arr[] = new int[]{9,6,4,2,8,3,7,0,1};
         int result = missingNumber(arr);
