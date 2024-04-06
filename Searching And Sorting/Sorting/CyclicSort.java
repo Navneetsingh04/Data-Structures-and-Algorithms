@@ -4,7 +4,7 @@ public class CyclicSort {
         int i = 0;
         while(i<arr.length){
             int correctIndex = arr[i]-1;
-            if(arr[i] != i+1){
+            if(arr[i] != arr[correctIndex]){
                 int temp  = arr[i];
                 arr[i] = arr[correctIndex];
                 arr[correctIndex] = temp;
@@ -15,7 +15,7 @@ public class CyclicSort {
         }
     }
     public static void main(String[] args) {
-        int arr[] = new int[]{1,5,2,3,4};
+        int arr[] = new int[]{7,5,6,3,4,1,8,2};
         System.out.print("Array before Sorting: ");
         System.out.println(Arrays.toString(arr));
         System.out.print("Array after Sorting: ");
