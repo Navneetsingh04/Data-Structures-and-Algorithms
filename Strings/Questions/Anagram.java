@@ -14,11 +14,11 @@ Example 2:
 Input: s = "rat", t = "car"
 Output: false
  */
-import java.util.Arrays;
-public class Anagram {
-    // 1st Appraoch : sort and compare
-    // Time Complexity: O(nlogn)
+// 1st Appraoch : sort and compare
+// Time Complexity: O(nlogn)
 
+// import java.util.Arrays;
+// public class Anagram {
     // public static boolean isAnagram(String s,String t){
     //     char[] string1 = s.toCharArray();
     //     char[] string2 = t.toCharArray();
@@ -28,8 +28,9 @@ public class Anagram {
     // }
 
 
-    //  1st Appraoch : using counting
+    //  2nd Appraoch : using counting
     // Time Complexity: O(n+m)
+    public class Anagram {
     public static boolean isAnagram(String s,String t){
         int freqTable[] = new int[256];
         for(int i = 0;i<s.length();i++){
