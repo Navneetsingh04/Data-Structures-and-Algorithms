@@ -17,7 +17,7 @@
 //     }
 
 
-// 2nd Approach two pointer
+// 2nd Approach: Sliding Window
 // Time complexity : O(n^2)
 public class FindAllSubarray {
     public static void findAllSubarray(int arr[]){
