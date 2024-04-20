@@ -1,5 +1,3 @@
-// package Array Questions;
-
 public class Count0And1 {
     public static void main(String args[]){
         int arr[] = new int[]{1,0,1,0,1,0,1,0,1,0,1,0,1};
