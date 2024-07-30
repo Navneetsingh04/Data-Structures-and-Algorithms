@@ -17,7 +17,7 @@ public class ReverseQueue {
         }
     }
 
-    // Using Recurr sion
+    // Using Recurrsion
     public static void reverse(Queue<Integer> q){
         if(q.isEmpty()){
             return;
