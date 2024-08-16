@@ -94,7 +94,7 @@ import java.util.Scanner;
 //         System.out.println();
 //     }
 
-// 3rd Approach
+// 3rd Approach: dividing Array into Two Parts
 
 // Time complexity : O(n)
 // space complexity : O(1)
@@ -115,8 +115,8 @@ public class RotateArray{
         reverse(arr,0,n-1);
         reverse(arr,0,k-1);
         reverse(arr,k, n-1);
-    for(int i: arr){
-        System.out.print(i+" ");
+        for(int i: arr){
+            System.out.print(i+" ");
         }
     }
     public static void main(String args[]){
