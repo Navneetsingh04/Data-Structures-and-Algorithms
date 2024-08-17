@@ -38,19 +38,19 @@ public class InorderTraversalIteratively {
     public static List<Integer> inorderTravesal(Node root){
         List<Integer> list = new ArrayList<>();
         Stack<Node> st = new Stack<>();
-        Node node = root;
+        Node temp = root;
         while(true){
-            if(node != null){
-                st.push(node);
-                node = node.left;
+            if(temp != null){
+                st.push(temp);
+                temp = temp.left;
             }
             else{
                 if(st.isEmpty()){
                     break;
                 }
-                node = st.pop();
-                list.add(node.data);
-                node = node.right;
+                temp = st.pop();
+                list.add(temp.data);
+                temp = temp.right;
             }
         }
         return list;
