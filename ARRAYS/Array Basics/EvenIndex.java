@@ -13,8 +13,8 @@ public class EvenIndex {
             System.out.print("Enter "+(i+1)+" elemnt in array: ");
             arr[i] = s.nextInt();
         }
-        System.out.println("Printing the Even Index Value of array");
-        for(int i = 1;i<=arr.length;i += 2){
+        System.out.print("Printing the Even Index Value of array: ");
+        for(int i = 0;i<arr.length;i += 2){
             System.out.print(arr[i]+" ");
         }
         s.close();
