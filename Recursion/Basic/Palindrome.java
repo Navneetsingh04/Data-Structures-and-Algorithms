@@ -10,12 +10,7 @@ public class Palindrome {
         reverse(n/10);
     }
     public static boolean checkPalindrome(int n){
-        if(n == temp){
-            return true;
-        }
-        else{
-            return false;
-        }
+        return n == temp;
     }
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
