@@ -23,7 +23,7 @@ import java.util.ArrayList;
 import java.util.List;
 public class SpiralPrint {
     public static List<Integer> spiralPrint(int matrix[][]){
-        List<Integer> ans = new ArrayList<Integer>();
+        List<Integer> ans = new ArrayList<>();
         int row = matrix.length;
         int col = matrix[0].length;
         int total = row*col;

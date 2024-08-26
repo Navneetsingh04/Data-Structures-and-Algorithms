@@ -10,9 +10,9 @@ public class RemoveEvenPosition{
         }
         System.out.println("Printing the no of element in the array: ");
         // removes element from Even Positions
-        for(int i = 0;i<arr.length;i += 2){   
+        for(int i = 1;i<arr.length;i += 2){   
              // removes element from Odd positions
-            // for(int i = 1;i<arr.length;i += 2){
+            // for(int i = 0;i<arr.length;i += 2){
             System.out.print(arr[i]+" ");
         }
         s.close();

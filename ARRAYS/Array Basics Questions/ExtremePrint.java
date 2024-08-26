@@ -22,8 +22,8 @@ public class ExtremePrint {
                 System.out.print(arr[l]);
             }
             else{
-            System.out.print(arr[l]+" ");
-            System.out.print(arr[h]+" ");
+                System.out.print(arr[l]+" ");
+                System.out.print(arr[h]+" ");
             }
             l++;
             h--;
