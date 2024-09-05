@@ -19,19 +19,13 @@ public class StackImplement {
     public void pop(){
         if(top == -1){
             System.out.println("Stack underFlow");
-            return;
         }
         else{
             top--;
         }
     }
     public boolean isEmpty(){
-        if(top == -1){
-            return true;
-        }
-        else{
-            return false;
-        }
+        return top == -1;
     }
     public int getTop(){
         if(top == -1){
