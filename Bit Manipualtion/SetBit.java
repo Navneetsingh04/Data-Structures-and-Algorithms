@@ -5,9 +5,7 @@ public class SetBit {
             System.out.println("Invalid bit position");
             return num;
         }
-        int mask = 1 <<(pos-1);
-        int result = num|mask;
-        return result;
+        return num|(1<<pos);
     }
     public static void main(String args[]){
         Scanner s = new Scanner(System.in);
@@ -15,7 +13,7 @@ public class SetBit {
         int num = s.nextInt();
         System.out.print("Enter the the bit positon to set: ");
         int pos = s.nextInt();
-        System.out.println("Number with bit at position "+pos+" set to 1: "+setBit(num, pos));
+        System.out.println("Number with bit at position "+pos+" set to 1 then it is: "+setBit(num, pos));
         s.close();
     }
 }
