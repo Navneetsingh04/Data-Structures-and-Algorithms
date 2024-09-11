@@ -1,13 +1,31 @@
 import java.util.Scanner;
 public class GCD {
+    // Brute force
+
+    // public static int gcd(int n,int m){
+    //     int mini = Math.min(n, m);
+    //     for(int i = mini;i>=1;i--){
+    //         if(n%i==0 && m%i == 0){
+    //             return i;
+    //         }
+    //     }
+    //     return 1;
+    // }
+
+    // optimal solution
     public static int gcd(int n,int m){
-        int maxi = Math.max(n, m);
-        for(int i =maxi;i>=1;i--){
-            if(n%i==0 && m%i == 0){
-                return i;
+        while(n > 0 &&  m >0){
+            if(n>m){
+                n = n%m;
+            }
+            else{
+                m = m%n;
+            }
+            if(m==0){
+                return n;
             }
         }
-        return 1;
+        return m;
     }
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
