@@ -42,10 +42,10 @@ public class SegmentedSieve{
 		Arrays.fill(dummyArray,1);
 
 		// edge case: when L = 1 mark it  0
-		if (L == 1) {
-            dummyArray[0] = 0;
+		if(L == 1){
+			dummyArray[0] = 0;
         }
-		// // step 3: mark all multiple of primes in (L-R) in dummy array
+		// step 3: mark all multiple of primes in (L-R) in dummy array
 		
 		for(int i : primes){
 			int firstMultiple = (L/i)*i;
@@ -66,8 +66,8 @@ public class SegmentedSieve{
 		return ans;
 	}
 	public static void main(String[] args) {
-		int L = 1;
-		int R = 10;
+		int L = 110;
+		int R = 200;
 		List<Integer> ans = segmentedSieve(L, R);
 		System.out.println("Primes in range [" + L + ", " + R + "]: " + ans);
 
