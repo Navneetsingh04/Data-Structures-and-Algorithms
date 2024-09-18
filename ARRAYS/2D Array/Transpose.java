@@ -1,4 +1,3 @@
-// package ARRAYS.2D Array;
 
 import java.util.Scanner;
 public class Transpose{
