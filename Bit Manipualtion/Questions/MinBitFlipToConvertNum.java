@@ -33,8 +33,10 @@ Constraints:
 public class MinBitFlipToConvertNum {
     public static int minBitFlips(int start, int goal) {
         int count = 0;
+        // XOR to find differing bits
         int ans = start^goal;
         while(ans != 0){
+            // Clear the lowest set bit
             ans = ans&(ans-1);
             count++;
         }
