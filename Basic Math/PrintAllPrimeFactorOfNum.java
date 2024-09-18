@@ -33,7 +33,7 @@ public class PrintAllPrimeFactorOfNum {
     // }
 
     // optimal 
-    // Time complexity: O(n^1/2*logn)
+    // Time complexity: O(sqrt(n)*logn)
 
     public static List<Integer> primefactors(int n){
         List<Integer> list = new ArrayList<>();

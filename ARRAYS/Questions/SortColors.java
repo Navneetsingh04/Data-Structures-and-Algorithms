@@ -1,6 +1,6 @@
 /*
 Dutch National Flag problem
-L.C : 75
+L.C : 75 Sort Colors
 
 Given an array nums with n objects colored red, white, or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white, and blue.
 We will use the integers 0, 1, and 2 to represent the color red, white, and blue, respectively.
@@ -24,10 +24,9 @@ nums[i] is either 0, 1, or 2.
 // Time complexity : O(2n)
  // space complexity : O(1)
 public class SortColors {
+
     // public static void sortColors(int arr[]){
-
         // int count0 = 0,count1 = 0,count2 = 0;
-
         // for(int i = 0;i<arr.length;i++){
         //     if(arr[i]==0){
         //         count0++;
@@ -65,25 +64,25 @@ public class SortColors {
         }
         public static void sortColors(int arr[]){
             int left = 0;
+            int mid = 0;
             int right = arr.length-1;
-            int index = 0;
-            while(index <= right){
-                if(arr[index] == 0){
-                    swap(arr,index,left);
+            while(mid <= right){
+                if(arr[mid] == 0){
+                    swap(arr,mid,left);
                     left++;
-                    index++;
+                    mid++;
                 }
-                else if(arr[index] == 2){
-                    swap(arr,index,right);
+                else if(arr[mid] == 2){
+                    swap(arr,mid,right);
                     right--;
                 }
                 else{
-                    index++;
+                    mid++;
                 }
             }
-            for(int i :arr){
+            for(int i : arr){
                 System.out.print(i+" ");
-                }
+            }
             System.out.println();
         }
     public static void main(String[] args) {

@@ -61,28 +61,35 @@ All the numbers of nums are unique.
     // Time complexity: O(n)
     // Space complexity : O(1) 
     public class MissingNumber {
+    // public static int missingNumber(int arr[]){
+    //     int i = 0;
+    //     while(i<arr.length){
+    //         int correct = arr[i];
+    //         if(arr[i] <arr.length && arr[i] != arr[correct]){
+    //             int temp = arr[i];
+    //             arr[i] = arr[correct];
+    //             arr[correct] = temp;
+    //         }
+    //         else{
+    //             i++;
+    //         }
+    //     }
+    //     for(i = 0;i<arr.length;i++){
+    //         if(arr[i] != i){
+    //             return i;
+    //         }
+    //     }
+    //     return arr.length;
+    // }
     public static int missingNumber(int arr[]){
-        int i = 0;
-        while(i<arr.length){
-            int correct = arr[i];
-            if(arr[i] <arr.length && arr[i] != arr[correct]){
-                int temp = arr[i];
-                arr[i] = arr[correct];
-                arr[correct] = temp;
-            }
-            else{
-                i++;
-            }
+        int xor = 0;
+        for(int i = 0;i<arr.length-1;i++){
+            xor = xor^arr[i];
         }
-        for(i = 0;i<arr.length;i++){
-            if(arr[i] != i){
-                return i;
-            }
-        }
-        return arr.length;
-        }
+        return xor;
+    } 
     public static void main(String[] args) {
-        int arr[] = new int[]{9,6,4,2,8,3,7,0,1};
+        int arr[] = new int[]{9,6,5,8,2,3,7,0,1};
         int result = missingNumber(arr);
         System.out.println("Missing number from the array is "+result);
 
