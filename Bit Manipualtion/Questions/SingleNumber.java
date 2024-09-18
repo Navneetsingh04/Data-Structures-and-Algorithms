@@ -22,15 +22,35 @@ Constraints:
 Each element in the array appears twice except for one element which appears only once. 
 */
 public class SingleNumber {
-    public static int singleNumber(int[] nums) {
-        int ans = 0;
-        for(int i: nums){
-            ans = i^ans;
+    // Time Complexity: O(n^2)
+    // Space Complexity: O(1)
+    public static int singleNumber(int[] nums){
+        for(int i = 0;i<nums.length;i++){
+            int n = nums[i];
+            int count =0;
+
+            for(int j = 0;j<nums.length;j++){
+                if(nums[j] == n){
+                    count++;
+                }
+            }
+            if(count == 1){
+                return n;
+            }
         }
-        return ans;
+        return -1;
     }
+    // Time Complexity: O(n)
+    // Space Complexity: O(1)
+    // public static int singleNumber(int[] nums) {
+    //     int ans = 0;
+    //     for(int i: nums){
+    //         ans = i^ans;
+    //     }
+    //     return ans;
+    // }
     public static void main(String[] args) {
         int nums[] = {1,2,2,1,3,3,4};
-        System.out.println(singleNumber(nums));
+        System.out.println("Single Number in the array is: "+singleNumber(nums));
     }
 }
