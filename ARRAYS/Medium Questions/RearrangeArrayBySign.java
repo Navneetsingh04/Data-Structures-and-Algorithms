@@ -27,7 +27,7 @@ nums consists of equal number of positive and negative integers.
 // Time compexity : O(n)
 // space compexity : O(n)
 
-public class RearrangeArray {
+public class RearrangeArrayBySign {
     public static int[] rearrangeArray(int arr[]){
         int n = arr.length;
         int ans[] = new int[n];
