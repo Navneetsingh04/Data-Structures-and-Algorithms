@@ -1,8 +1,8 @@
-public class StackImplement {
+public class StackImplementionUsingArray {
     int arr[];
     int size;
     int top;
-    StackImplement(int size){
+    StackImplementionUsingArray(int size){
         arr = new int[size];
         this.size = size;
         this.top = -1;
@@ -49,7 +49,7 @@ public class StackImplement {
         System.out.println();
     }
     public static void main(String args[]){
-        StackImplement st = new StackImplement(8);
+        StackImplementionUsingArray st = new StackImplementionUsingArray(8);
         st.push(1);
         st.print();
         st.push(2);
