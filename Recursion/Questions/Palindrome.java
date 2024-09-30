@@ -9,7 +9,7 @@ public class Palindrome{
         return palindrome(str, s+1, e-1);
     }
     public static void main(String[] args) {
-        String str = "r";
+        String str = "madam";
         int s = 0;
         int e = str.length()-1;
         boolean result = palindrome(str, s, e);

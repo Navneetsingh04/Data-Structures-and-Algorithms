@@ -32,7 +32,6 @@ public class Implementation {
         // underFlow
         if(front == -1 && rear == -1){
             System.out.println("Queue UnderFlow");
-            return;
         }
         else if(front == rear){
             // empty case -> single element
@@ -46,12 +45,7 @@ public class Implementation {
         }
     }
     public boolean isEmpty(){
-        if(front == -1 && rear == -1){
-            return true;
-        }
-        else{
-            return false;
-        }
+        return front == -1 && rear == -1;
     }
     public int getSize(){
         if(front == -1 && rear == -1){

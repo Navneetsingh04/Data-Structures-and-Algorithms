@@ -1,12 +1,13 @@
 public class power {
-    public static int pow(int n){
+    public static int pow(int x,int n){
         if(n == 0){
             return 1;
         }
-        return 2*pow(n-1);
+        return x*pow(x,n-1);
     }
     public static void main(String[] args) {
-        int n = 5;
-        System.out.println(pow(n));
+        int x = 5;
+        int n = 3;
+        System.out.println(pow(x,n));
     }
 }

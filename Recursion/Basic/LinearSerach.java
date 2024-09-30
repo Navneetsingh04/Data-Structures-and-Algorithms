@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-public class LinerSerach {
+public class LinearSerach {
     static ArrayList<Integer> list = new ArrayList<>();
     public static int serach(int arr[],int index,int target){
         if(index >= arr.length){
