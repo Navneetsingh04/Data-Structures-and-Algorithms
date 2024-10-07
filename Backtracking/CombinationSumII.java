@@ -40,13 +40,11 @@ public class CombinationSumII {
             ans.add(new ArrayList<>(list));
             return;
         }
-        if(target < 0){
-            return;
-        }
         for(int i = index;i<arr.length;i++){
             if(i > index && arr[i] == arr[i-1]){
                 continue;
             }
+            if(arr[i] > target) break;
             list.add(arr[i]);
             combiantionSumHelpher(arr, target-arr[i], list, ans, i+1);
             list.remove(list.size()-1);
