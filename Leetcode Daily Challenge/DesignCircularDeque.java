@@ -129,5 +129,6 @@ public class DesignCircularDeque {
     }
     public static void main(String[] args) {
         DesignCircularDeque deque = new DesignCircularDeque(5);
+        deque.isFull();
     }
 }
