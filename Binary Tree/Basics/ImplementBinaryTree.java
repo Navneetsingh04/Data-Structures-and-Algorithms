@@ -21,8 +21,10 @@ public class ImplementBinaryTree {
         // create node
         Node root = new Node(data);
         // create left subtree
+        System.out.println("Enter left child of "+data);
         root.left = createTree(s);
         // create right subtree
+        System.out.println("Enter right child of "+data);
         root.right = createTree(s);
         return root;  
     }
@@ -30,7 +32,12 @@ public class ImplementBinaryTree {
         ImplementBinaryTree tree = new ImplementBinaryTree();
         Scanner s = new Scanner(System.in);
         Node root = tree.createTree(s);
-        System.out.println(root.data);
+        if(root != null){
+            System.out.println("Root node value: " +root.data);
+        }
+        else{
+            System.out.println("The tree is empty");
+        }
         s.close();   
     }
 }
