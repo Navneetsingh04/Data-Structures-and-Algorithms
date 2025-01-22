@@ -1,6 +1,6 @@
 /*
 Flattening a Linked List
-Last Updated : 04 Dec, 2023
+
 Given a Linked List of size N, where every node represents a sub-linked-list and contains two pointers:
 (i) a next pointer to the next node,
 (ii) a bottom pointer to a linked list where this node is head.

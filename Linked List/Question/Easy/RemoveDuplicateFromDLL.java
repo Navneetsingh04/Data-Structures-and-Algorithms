@@ -1,6 +1,6 @@
 /*
 Remove duplicates from a sorted doubly linked list
-Difficulty: EasyAccuracy: 50.36%Submissions: 16K+Points: 2
+
 Given a doubly linked list of n nodes sorted by values, the task is to remove duplicate nodes present in the linked list.
 
 Example 1:
