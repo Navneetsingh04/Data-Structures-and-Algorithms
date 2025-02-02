@@ -1,6 +1,8 @@
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
+import java.util.List;
 
 public class LevelOrderTraversal {
     static class Node{
@@ -25,26 +27,36 @@ public class LevelOrderTraversal {
         root.right = createTree(s);
         return root;
     }
-    public static void levelOrderTraversal(Node root){
+    public static List<List<Integer>> levelOrderTraversal(Node root){
+        List<List<Integer>> list = new ArrayList<>();
+        if(root == null) return list;
+
         Queue<Node> q = new LinkedList<>();
         q.add(root);
         while(!q.isEmpty()){
-            Node front = q.peek();
-            q.poll();
-            System.out.print(front.data+" ");
-            if(front.left != null){
-                q.add(front.left);
+            int size = q.size();
+            List<Integer> currLevel = new ArrayList<>();
+            for(int i = 0;i<size;i++){
+                Node front = q.poll();
+                currLevel.add(front.data);
+                if(front.left != null){
+                    q.add(front.left);
+                }
+                if(front.right != null){
+                    q.add(front.right);
+                }
             }
-            if(front.right != null){
-                q.add(front.right);
-            }
+            list.add(currLevel);
         }
+        return list;
     }
     public static void main(String[] args){
         Scanner s= new Scanner(System.in);
         Node root = createTree(s);
         System.out.print("Level Order Traversal: ");
+        List<List<Integer>> list = levelOrderTraversal(root);
         levelOrderTraversal(root);
+        System.out.println(list);
         s.close();   
     }
 }
