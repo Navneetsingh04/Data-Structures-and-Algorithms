@@ -57,7 +57,7 @@ public class MaximumWidthOfBinaryTree {
         while(!q.isEmpty()){
             int size = q.size();
             // to make id starting from zero
-            int mmin = q.peek().num;
+            // int mmin = q.peek().num;
             int first = 0;
             int last = 0;
             for(int i = 0;i<size;i++){
