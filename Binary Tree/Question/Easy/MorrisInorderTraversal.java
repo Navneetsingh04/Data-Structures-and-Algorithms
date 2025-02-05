@@ -1,10 +1,8 @@
-// Time complexity: O(n)
-// Space complexity: O(1)
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MorrisPreorderTraversal {
+public class MorrisInorderTraversal {
     static class Node{
         int data;
         Node left;
@@ -31,11 +29,11 @@ public class MorrisPreorderTraversal {
                 }
                 if(prev.right == null){
                     prev.right = curr;
-                    inorder.add(curr.data);
                     curr = curr.left;
                 }
                 else{
                     prev.right = null;
+                    inorder.add(curr.data);
                     curr = curr.right;
                 }
             }
@@ -51,7 +49,6 @@ public class MorrisPreorderTraversal {
         root.left.right.right = new Node(6);
 
         List<Integer> ans = getInorder(root);
-        System.out.println("Morris Preorder Traversal: "+ans);
+        System.out.println("Morris Inorder Traversal: "+ans);
     }
 }
-

@@ -1,10 +1,6 @@
 /*
 L.C: 2583. Kth Largest Sum in a Binary Tree
-Solved
-Medium
-Topics
-Companies
-Hint
+
 You are given the root of a binary tree and a positive integer k.
 
 The level sum in the tree is the sum of the values of the nodes that are on the same level.
