@@ -1,6 +1,3 @@
-
-import java.util.Stack;
-
 /*
 L.C: 456. 132 Pattern
 
@@ -31,6 +28,7 @@ n == nums.length
 1 <= n <= 2 * 105
 -109 <= nums[i] <= 109 
 */
+import java.util.Stack;
 public class Pattern132 {
     // Approach 1: Brute force
     // Time complexity : O(n^2)
