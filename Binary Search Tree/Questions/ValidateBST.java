@@ -1,5 +1,5 @@
 /*
-L.C: 98. dataidate Binary Search Tree
+L.C: 98. validate Binary Search Tree
 
 Given the root of a binary tree, determine if it is a dataid binary search tree (BST).
 
@@ -38,27 +38,38 @@ public class ValidateBST {
             this.right = null;
         }
     }
-    public static boolean solve(Node root,long lowerBound,long upperBound){
-        if(root == null){
-            return true;
-        }
-        boolean cond1 = (root.data>lowerBound);
-        boolean cond2 = (root.data<upperBound);
-        boolean leftAns = solve(root.left,lowerBound,root.data);
-        boolean rightAns = solve(root.right,root.data,upperBound);
+    // public static boolean solve(Node root,long lowerBound,long upperBound){
+    //     if(root == null){
+    //         return true;
+    //     }
+    //     boolean cond1 = (root.data>lowerBound);
+    //     boolean cond2 = (root.data<upperBound);
+    //     boolean leftAns = solve(root.left,lowerBound,root.data);
+    //     boolean rightAns = solve(root.right,root.data,upperBound);
 
-        if(cond1 && cond2 && leftAns && rightAns){
-            return true;
-        }
-        else{
+    //     if(cond1 && cond2 && leftAns && rightAns){
+    //         return true;
+    //     }
+    //     else{
+    //         return false;
+    //     }
+    // }
+    // public static boolean isValidBST(Node root) {
+    //     long lowerBound = Long.MIN_VALUE;
+    //     long upperBound = Long.MAX_VALUE;
+    //     boolean ans = solve(root,lowerBound,upperBound);
+    //     return ans;
+    // }
+    
+    public static boolean isValidBST(Node root) {
+        return checkBST(root,Long.MIN_VALUE,Long.MAX_VALUE);
+    }
+    public static boolean checkBST(Node root,long min,long max){
+        if(root == null ) return true;
+        if(root.data <= min || root.data >= max){
             return false;
         }
-    }
-    public static boolean isValidBST(Node root) {
-        long lowerBound = Long.MIN_VALUE;
-        long upperBound = Long.MAX_VALUE;
-        boolean ans = solve(root,lowerBound,upperBound);
-        return ans;
+        return checkBST(root.left,min,root.data) && checkBST(root.right,root.data,max);
     }
     public static void main(String[] args) {
         Node root = new Node(5);
