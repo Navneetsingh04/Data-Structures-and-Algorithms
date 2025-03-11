@@ -21,8 +21,10 @@ The number of nodes in the tree is in the range [0, 100].
 -100 <= Node.val <= 100 
 */
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Queue;
 
 public class RightSideView {
     static class Node{
@@ -49,6 +51,26 @@ public class RightSideView {
         rightView(root,ans,0);
         return ans;
     }
+    public static void rightViewBFS(Node root){
+        if(root == null){
+            return;
+        }
+        Queue<Node> queue = new ArrayDeque<>();
+        List<Integer> list = new ArrayList<>();
+        queue.add(root);
+        while(!queue.isEmpty()){
+            int size = queue.size();
+            for(int i = 0;i<size;i++){
+                Node curr = queue.poll();
+                if(i == size-1){
+                    list.add(curr.data);
+                }
+                if(curr.left != null) queue.add(curr.left);
+                if(curr.right != null) queue.add(curr.right);
+            }
+        }
+        System.out.println(list);
+    }
     public static void main(String[] args) {
         Node root = new Node(1);
         root.left = new Node(2);
@@ -59,7 +81,8 @@ public class RightSideView {
         root.right.right = new Node(7);
 
         List<Integer> ans = rightView(root);
-        System.out.println("Right side View: "+ans);
+        System.out.println("Right side View DFS: "+ans);
+        System.out.print("Right side View BFS: ");rightViewBFS(root);   
     }
 }
  
