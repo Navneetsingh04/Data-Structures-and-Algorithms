@@ -25,7 +25,7 @@ Constraints:
 The number of nodes in the tree is in the range [1, 104].
 -231 <= Node.data <= 231 - 1 
 */
-
+import java.util.ArrayList;
 public class ValidateBST {
     static class Node{
         int data;
@@ -38,38 +38,54 @@ public class ValidateBST {
             this.right = null;
         }
     }
-    // public static boolean solve(Node root,long lowerBound,long upperBound){
-    //     if(root == null){
-    //         return true;
-    //     }
-    //     boolean cond1 = (root.data>lowerBound);
-    //     boolean cond2 = (root.data<upperBound);
-    //     boolean leftAns = solve(root.left,lowerBound,root.data);
-    //     boolean rightAns = solve(root.right,root.data,upperBound);
+    // Approach 1: Inorder Traversal (Store in List)
 
-    //     if(cond1 && cond2 && leftAns && rightAns){
-    //         return true;
-    //     }
-    //     else{
-    //         return false;
-    //     }
-    // }
-    // public static boolean isValidBST(Node root) {
-    //     long lowerBound = Long.MIN_VALUE;
-    //     long upperBound = Long.MAX_VALUE;
-    //     boolean ans = solve(root,lowerBound,upperBound);
-    //     return ans;
-    // }
-    
-    public static boolean isValidBST(Node root) {
-        return checkBST(root,Long.MIN_VALUE,Long.MAX_VALUE);
+    public static void inOrder(Node root,ArrayList<Integer> list){
+        if(root == null) return;
+        inOrder(root.left, list);
+        list.add(root.data);
+        inOrder(root.right, list);
     }
-    public static boolean checkBST(Node root,long min,long max){
-        if(root == null ) return true;
-        if(root.data <= min || root.data >= max){
+    public static boolean isBST(Node root){
+        ArrayList<Integer> list = new ArrayList<>();
+        inOrder(root, list);
+        for(int i = 1;i<list.size();i++){
+            if(list.get(i) <= list.get(i-1)){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    // Approach 2: Inorder Traversal Without Extra Space
+
+    static Node prev = null;
+    public static boolean checkBST(Node root){
+        if(root == null) return true;
+        if(!checkBST(root.left)) return false;
+        if(prev != null && root.data <= prev.data){
             return false;
         }
-        return checkBST(root.left,min,root.data) && checkBST(root.right,root.data,max);
+        prev = root;
+        return checkBST(root.right);
+    }
+    
+    // Approach 3: Min-Max Approach
+
+    static boolean isValid;
+    public static void checkBSTI(Node root,long min,long max){
+        if(root == null ) return;
+        if(root.data <= min || root.data >= max){
+            isValid = false;
+            return;
+        }
+        checkBSTI(root.left,min,root.data);
+        checkBSTI(root.right,root.data,max);
+    }
+    public static boolean isBSTUsingMinMax(Node root) {
+        isValid = true;
+        checkBSTI(root, Long.MIN_VALUE, Long.MAX_VALUE);
+        return isValid;
     }
     public static void main(String[] args) {
         Node root = new Node(5);
@@ -77,13 +93,8 @@ public class ValidateBST {
         root.right = new Node(4);
         root.right.left = new Node(3);
         root.right.right = new Node(6);
-
-        boolean ans = isValidBST(root);
-        if(ans){
-            System.out.println("It is valid BST");
-        }
-        else{
-            System.out.println("It is not Valid BST");
-        }
+        System.out.println(checkBST(root));
+        System.out.println(isBST(root));
+        System.out.println(isBSTUsingMinMax(root));
     }
 }

@@ -1,6 +1,8 @@
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Queue;
 
 public class LeftSideView {
     static class Node{
@@ -14,6 +16,7 @@ public class LeftSideView {
             this.right = null;
         }
     }
+    // Using DFS
     public static void leftView(Node root,List<Integer> ans,int currDepth){
         if(root == null) return;
         if(currDepth == ans.size()){
@@ -27,6 +30,24 @@ public class LeftSideView {
         leftView(root,ans,0);
         return ans;
     }
+    // Using BFS 
+    public static List<Integer> leftViewBFS(Node root){
+        Queue<Node> queue = new ArrayDeque<>();
+        List<Integer> list = new ArrayList<>();
+        queue.add(root);
+        while(!queue.isEmpty()){
+            int size = queue.size();
+            for(int i= 0;i<size;i++){
+                Node curr = queue.poll();
+                if(i == 0){
+                    list.add(curr.data);
+                }
+                if(curr.left != null) queue.add(curr.left);
+                if(curr.right != null) queue.add(curr.right);
+            }
+        }
+        return list;
+    }
     public static void main(String[] args) {
         Node root = new Node(1);
         root.left = new Node(2);
@@ -37,7 +58,8 @@ public class LeftSideView {
         root.right.right = new Node(7);
 
         List<Integer> ans = leftView(root);
-        System.out.println("Left side View: "+ans);
+        System.out.println("Left side View DFS: "+ans);
+        System.out.println("Left side View BFS: "+leftViewBFS(root));
     }
 }
 

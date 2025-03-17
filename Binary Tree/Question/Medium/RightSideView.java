@@ -38,19 +38,25 @@ public class RightSideView {
             this.right = null;
         }
     }
-    public static void rightView(Node root,List<Integer> ans,int currDepth){
+
+    // Approch 1: Using DFS 
+
+    public static void rightViewDFS(Node root,List<Integer> ans,int currDepth){
         if(root == null) return;
         if(currDepth == ans.size()){
             ans.add(root.data);
         }
-        rightView(root.right,ans,currDepth+1);
-        rightView(root.left,ans,currDepth+1);
+        rightViewDFS(root.right,ans,currDepth+1);
+        rightViewDFS(root.left,ans,currDepth+1);
     }
-    public static List<Integer> rightView(Node root){
+    public static List<Integer> rightViewDFS(Node root){
         List<Integer> ans = new ArrayList<>();
-        rightView(root,ans,0);
+        rightViewDFS(root,ans,0);
         return ans;
     }
+
+    // Approch 2: Using BFS
+
     public static void rightViewBFS(Node root){
         if(root == null){
             return;
@@ -80,7 +86,7 @@ public class RightSideView {
         root.left.right.left = new Node(6);
         root.right.right = new Node(7);
 
-        List<Integer> ans = rightView(root);
+        List<Integer> ans = rightViewDFS(root);
         System.out.println("Right side View DFS: "+ans);
         System.out.print("Right side View BFS: ");rightViewBFS(root);   
     }
