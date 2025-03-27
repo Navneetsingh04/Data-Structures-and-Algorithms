@@ -1,3 +1,6 @@
+// Time Complexity: O(n*log(log(n)))
+// Space Complexity: O(n)
+
 import java.util.Arrays;
 public class SieveOfEratosthenes {
     public static void sieveOfEratosthenes(int n){
