@@ -46,11 +46,8 @@ public class SegmentedSieve{
 		// step 3: mark all multiple of primes in (L-R) in dummy array
 		
 		for(int i : primes){
-			int firstMultiple = (L/i)*i;
-			if(firstMultiple < L){
-				firstMultiple += i; 
-			}
-			for(int j = Math.max(firstMultiple,i*i);j<=R;j += i){
+			int first = Math.max(i*i,(L+i-1)/i*i);
+			for(int j = first;j<=R;j += i){
 				dummyArray[j-L] = 0;
 			}
 		}
