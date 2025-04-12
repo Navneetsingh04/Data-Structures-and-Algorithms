@@ -1,4 +1,4 @@
-public class BinarySearch{
+public class BinarySearchImp{
     public static int binarySearch(int arr[],int target){
         int n = arr.length;
         int s = 0;
