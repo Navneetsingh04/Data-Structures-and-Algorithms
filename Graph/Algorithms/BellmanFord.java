@@ -1,5 +1,6 @@
+// Time Complexity: O(V*E)
+// Space Complexity: O(V+E)
 import java.util.Arrays;
-
 public class BellmanFord {
     public static int[] bellmanFord(int V, int[][] edges, int src) {
         int dist[] = new int[V];
