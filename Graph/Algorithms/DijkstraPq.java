@@ -1,10 +1,10 @@
+// Time Complexity: O(ElogV)
+// Space Complexity: O(V+E)
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.PriorityQueue;
-
-// Time Complexity: O(ElogV)
-// Space Complexity: O(V+E)
 
 class Pair{
     int distance,node;
