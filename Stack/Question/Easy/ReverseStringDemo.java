@@ -1,5 +1,5 @@
 import java.util.Stack;
-public class ReverseString {
+public class ReverseStringDemo {
     public static void main(String args[]){
         Stack<Character> st = new Stack<>();
         String str = "Navneet Singh";
