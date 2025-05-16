@@ -1,5 +1,5 @@
 /*
-L.c 340: Given a string s and an integer k, return the length of the longest substring of s that contains at most k distinct characters.
+L.C 340: Given a string s and an integer k, return the length of the longest substring of s that contains at most k distinct characters.
 Example 1:
 Input: s = "eceba", k = 2
 Output: 3

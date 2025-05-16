@@ -2,29 +2,29 @@ public class LongestSubarryaSumEqualTok {
     // Approach: Brute Force
     // Time Complexity: O(n^2)
 
-    // public static int longestSubarray(int arr[],int k){
-    //     int n = arr.length;
-    //     int maxLen = 0;
-    //     for(int i = 0;i<n;i++){
-    //         int sum = 0;
-    //         for(int j = i;j<n;j++){
-    //             sum += arr[j];
-    //             if(sum <= k){
-    //                 maxLen = Math.max(maxLen,j-i+1);
-    //             }
-    //             else if(sum>k){
-    //                 break;
-    //             }
+    public static int longestSubarray(int arr[],int k){
+        int n = arr.length;
+        int maxLen = 0;
+        for(int i = 0;i<n;i++){
+            int sum = 0;
+            for(int j = i;j<n;j++){
+                sum += arr[j];
+                if(sum <= k){
+                    maxLen = Math.max(maxLen,j-i+1);
+                }
+                else if(sum>k){
+                    break;
+                }
                 
-    //         }
-    //     }
-    //     return maxLen;
-    // }
+            }
+        }
+        return maxLen;
+    }
 
     // Approach 2: Sliding Window
     // Time Complexity: O(2n) 
 
-    public static int longestSubarray(int arr[],int k){
+    public static int longestSubarrayI(int arr[],int k){
         int n = arr.length;
         int l = 0,r = 0;
         int sum = 0;
