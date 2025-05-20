@@ -47,7 +47,6 @@ public class NumOfSubstringsContainingAllThreeChar {
         return count;
     }
 
-    // Approach 1: Sliding Window
     // T.C: O(n)
     // S.C: O(1)
 
@@ -71,7 +70,6 @@ public class NumOfSubstringsContainingAllThreeChar {
     public static void main(String[] args) {
         String s = "abcabc";
         System.out.println(numberOfSubstrings(s));
-        System.out.println(numberOfSubstringsI(s));
-        
+        System.out.println(numberOfSubstringsI(s)); 
     }
 }
