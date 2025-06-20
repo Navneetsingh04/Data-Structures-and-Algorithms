@@ -87,20 +87,20 @@ public class DeleteMiddleOfLL {
         }
         return head;
     }
-    // public static Node deleteNode(Node head){
-    //     if(head == null || head.next == null){
-    //         return null;
-    //     }
-    //     Node slow = head;
-    //     Node fast = head;
-    //     fast = fast.next.next;
-    //     while(fast != null && fast.next != null){
-    //         slow = slow.next;
-    //         fast = fast.next.next;
-    //     }
-    //     slow.next = slow.next.next;
-    //     return head;
-    // }
+    public static Node deleteNodeI(Node head){
+        if(head == null || head.next == null){
+            return null;
+        }
+        Node slow = head;
+        Node fast = head;
+        fast = fast.next.next;
+        while(fast != null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        slow.next = slow.next.next;
+        return head;
+    }
     
     public static void main(String args[]){
         int arr[] = new int[]{1,2,3,4,5,6};

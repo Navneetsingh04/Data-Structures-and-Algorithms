@@ -57,34 +57,34 @@ public class SortColors {
     // Time complexity : O(n)
     // space complexity : O(1)
 
-        static void swap(int[] arr,int l,int r){
-            int temp = arr[l];
-            arr[l] = arr[r];
-            arr[r] = temp;
-        }
-        public static void sortColors(int arr[]){
-            int left = 0;
-            int mid = 0;
-            int right = arr.length-1;
-            while(mid <= right){
-                if(arr[mid] == 0){
-                    swap(arr,mid,left);
-                    left++;
-                    mid++;
-                }
-                else if(arr[mid] == 2){
-                    swap(arr,mid,right);
-                    right--;
-                }
-                else{
-                    mid++;
-                }
+    static void swap(int[] arr,int l,int r){
+        int temp = arr[l];
+        arr[l] = arr[r];
+        arr[r] = temp;
+    }
+    public static void sortColors(int arr[]){
+        int left = 0;
+        int mid = 0;
+        int right = arr.length-1;
+        while(mid <= right){
+            if(arr[mid] == 0){
+                swap(arr,mid,left);
+                left++;
+                mid++;
             }
-            for(int i : arr){
-                System.out.print(i+" ");
+            else if(arr[mid] == 2){
+                swap(arr,mid,right);
+                right--;
             }
-            System.out.println();
+            else{
+                mid++;
+            }
         }
+        for(int i : arr){
+            System.out.print(i+" ");
+        }
+        System.out.println();
+    }
     public static void main(String[] args) {
         int arr[] = new int[]{2,0,2,1,1,0};
         sortColors(arr);

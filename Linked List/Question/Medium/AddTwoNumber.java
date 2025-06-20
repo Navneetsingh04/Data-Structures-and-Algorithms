@@ -27,8 +27,8 @@ The number of nodes in each linked list is in the range [1, 100].
 It is guaranteed that the list represents a number that does not have leading zeros. 
 */
 
-// Time complexity: O(l1)+O(l2);
-// Space Complexity : O(l1)+O(l2)
+// Time complexity: O(L1)+O(L2);
+// Space Complexity : O(L1)+O(L2)
 import java.util.ArrayDeque;
 import java.util.Deque;
 

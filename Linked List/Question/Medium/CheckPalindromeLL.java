@@ -49,6 +49,11 @@ public class CheckPalindromeLL{
         }
         System.out.println();
     }
+
+    // Approch 1: using Stack
+    // Time Complexity: O(n)
+    // Space Complexity: O(n)
+
     public static boolean isPalindrome(Node head,Stack<Integer> st){
         Node temp = head;
         while(temp != null){
@@ -65,6 +70,11 @@ public class CheckPalindromeLL{
         }
         return true;
     }
+
+    // Approach 2: Using Slow and fast pointer
+    // Time Complexity: O(n)
+    // Space Complexity: O(n)
+
     public static Node reverse(Node head){
         if(head == null || head.next == null){
             return head;

@@ -24,26 +24,26 @@ public class CommonElements {
         int lastprint = Integer.MIN_VALUE;
         int index = 0;
         while(i<arr1.length && j<arr2.length && k<arr3.length){
-        if(arr1[i]==arr2[j] && arr2[j]==arr3[k]){
-            if(arr1[i] != lastprint){
-            result[index++] = arr1[i];
-            lastprint = arr1[i];
-        }
+            if(arr1[i]==arr2[j] && arr2[j]==arr3[k]){
+                if(arr1[i] != lastprint){
+                result[index++] = arr1[i];
+                lastprint = arr1[i];
+            }
             i++;
             j++;
             k++;
+            }
+            else if(arr1[i]<arr2[j]){
+                i++;
+            }
+            else if(arr2[j]<arr3[k]){
+                j++;
+            }
+            else{
+                k++;
+            }
         }
-        else if(arr1[i]<arr2[j]){
-            i++;
-        }
-        else if(arr2[j]<arr3[k]){
-            j++;
-        }
-        else{
-            k++;
-        }
-    }
-    return Arrays.copyOf(result, index);
+        return Arrays.copyOf(result, index);
     }
 public static void main(String[] args) {
     // int arr1[] = new int[]{1, 5, 10, 20, 40, 80};

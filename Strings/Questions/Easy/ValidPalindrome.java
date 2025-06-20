@@ -27,7 +27,10 @@ Constraints:
 1 <= s.length <= 2 * 105
 s consists only of printable ASCII characters.
  */
+
 public class ValidPalindrome {
+    // Time Complexity: O(n)
+    // Space Complexity: O(n)
     public static  boolean isPalindrome(String s) {
         s = s.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
         int n = s.length();
@@ -42,8 +45,28 @@ public class ValidPalindrome {
         }
         return true;
     }
+
+    // Time Complexity: O(n)
+    // Space Complexity: O(1)
+
+    public static boolean isPalindromeI(String s) {
+        int n = s.length();
+        int l = 0,r = n-1;
+        while(l<r){
+            while(l<r && !Character.isLetterOrDigit(s.charAt(l))) l++; 
+            while(l<r && !Character.isLetterOrDigit(s.charAt(r))) r--; 
+            if(Character.toLowerCase(s.charAt(l)) != Character.toLowerCase(s.charAt(r))){
+               return false;
+            }
+            l++;
+            r--;
+        }
+        return true;
+    }
     public static void main(String[] args) {
         String str =  "A man, a plan, a canal: Panama";
         System.out.println(isPalindrome(str));
+        System.out.println(isPalindromeI(str));
+
     }
 }
