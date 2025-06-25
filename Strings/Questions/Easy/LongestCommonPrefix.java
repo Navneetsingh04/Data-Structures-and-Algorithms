@@ -17,20 +17,18 @@ Constraints:
 strs[i] consists of only lowercase English letters.
  */
 public class LongestCommonPrefix {
-    public static String longestCommonPrefix(String[] str){
-        int i = 0;
-        StringBuilder ans = new StringBuilder();
-        while(i<str[0].length()){
-            char currCh = str[0].charAt(i);
-            for(String s:str){
-            if(i>= s.length() || s.charAt(i) != currCh){
-                return ans.toString();
+    public static String longestCommonPrefix(String[] strs){
+       int n = strs.length;
+        if(n == 0 || strs == null) return "";
+        for(int i = 0;i<strs[0].length();i++){
+            char ch = strs[0].charAt(i);
+            for(int j = 1;j<n;j++){
+                if(i >= strs[j].length() || strs[j].charAt(i) != ch){
+                    return strs[0].substring(0,i);
+                }
             }
         }
-        ans.append(currCh);
-        i++;
-    }
-    return ans.toString();
+        return strs[0];
     }
     public static void main(String args[]){
         String[] str = new String[]{"flower","flow","flight"};
