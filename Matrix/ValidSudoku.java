@@ -71,6 +71,9 @@ public class ValidSudoku {
                 }
             }
         }
+
+        // validate 3x3 matrix
+
         for(int i = 0;i<9;i += 3){
             for(int j = 0;j<9;j += 3){
                 Set<Character> set = new HashSet<>();
@@ -85,6 +88,29 @@ public class ValidSudoku {
             }
         }
         return true;
+    }
+
+    public static boolean isValidSudokuI(char[][] board) {
+       boolean[][] rows = new boolean[9][9];
+       boolean[][] cols = new boolean[9][9];
+       boolean[][] box = new boolean[9][9];
+
+       for(int i = 0;i<9;i++){
+        for(int j = 0;j<9;j++){
+            char c = board[i][j];
+            if(c == '.') continue;
+
+            int num = c-'1';
+            int boxIndex = (i/3)*3+(j/3);
+
+            if(rows[i][num] || cols[j][num] || box[boxIndex][num]) return false;
+
+            rows[i][num] = true;
+            cols[j][num] = true;
+            box[boxIndex][num] = true;
+            }
+        }
+       return true;
     }
     public static void main(String[] args) {
     char[][]  board = 
