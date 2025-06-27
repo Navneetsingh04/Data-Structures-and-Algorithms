@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 public class Transpose{
     public static void transpose(int arr[][],int rows,int col){
