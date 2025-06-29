@@ -21,7 +21,7 @@ n == matrix[i].length
 
 import java.util.ArrayList;
 import java.util.List;
-public class SpiralPrint {
+public class SpiralMatrix {
     public static List<Integer> spiralPrint(int matrix[][]){
         List<Integer> ans = new ArrayList<>();
         int row = matrix.length;

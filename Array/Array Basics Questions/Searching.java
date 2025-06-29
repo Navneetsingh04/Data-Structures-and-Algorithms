@@ -1,5 +1,7 @@
 // using linear serach find the elemnent and return its index.
 import java.util.Scanner;
+
+import Easy.Searching;
 public class Searching{
     int linearSearch(int arr[],int target){
         for(int i = 0;i<arr.length;i++){
