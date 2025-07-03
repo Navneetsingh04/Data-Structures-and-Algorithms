@@ -12,10 +12,10 @@ A comprehensive collection of **Data Structures and Algorithms** implementations
 ## 📚 Table of Contents
 
 - [Overview](#overview)
-- [Repository Structure](#repository-structure)
+- [Key Features](#Key-features)
 - [Topics Covered](#topics-covered)
+- [Quick Navigation Links](#quick-navigation-links)
 - [Getting Started](#getting-started)
-- [Problem Categories](#problem-categories)
 - [Contributing](#contributing)
 - [Resources](#resources)
 
@@ -23,12 +23,16 @@ A comprehensive collection of **Data Structures and Algorithms** implementations
 
 This repository contains well-organized Java implementations of fundamental data structures and algorithms, along with solutions to coding problems from platforms like LeetCode, CodeChef, GeeksforGeeks, programming contests, and classic DSA questions.
 
-### Key Features:
+## Key Features:
 - ✅ **Comprehensive Coverage**: From basic math to advanced algorithms
 - ✅ **Organized Structure**: Problems categorized by topic and difficulty
 - ✅ **Clean Code**: Well-commented and readable implementations
 - ✅ **Multiple Approaches**: Different solutions for complex problems
 
+### 📊 Problem Categories By Difficulty Level
+- 🟢 **Easy**: Fundamental concepts and basic problem-solving
+- 🟡 **Medium**: Intermediate algorithms and data structure applications
+- 🔴 **Hard**: Advanced algorithms and complex problem-solving
 ## 🧩 Topics Covered
 
 ### Core Data Structures
@@ -57,7 +61,8 @@ This repository contains well-organized Java implementations of fundamental data
 - **Modular Arithmetic** - Efficient calculations
 - **Matrix Operations** - 2D array manipulations
 
-### 🔗 Quick Navigation Links
+
+## 🔗 Quick Navigation Links
 
 #### **Core Data Structures**
 
@@ -128,37 +133,11 @@ This repository contains well-organized Java implementations of fundamental data
 - Basic understanding of Java programming
 
 
-## 📊 Problem Categories
-
-### By Difficulty Level
-- 🟢 **Easy**: Fundamental concepts and basic problem-solving
-- 🟡 **Medium**: Intermediate algorithms and data structure applications
-- 🔴 **Hard**: Advanced algorithms and complex problem-solving
-
 ### By Source
 - **LeetCode Daily Challenge**: Daily practice problems
 - **Contest Questions**: Competitive programming solutions
 - **Classic DSA**: Fundamental computer science problems
 - **Interview Prep**: Common technical interview questions
-
-## 🏆 Featured Implementations
-
-### Dynamic Programming Patterns
-- **DP on Grids**: Path counting, minimum cost paths
-- **DP on Strings**: Edit distance, longest common subsequence
-- **DP on Subsequences**: Subset problems, partition problems
-- **DP on Stocks**: Buy-sell stock variants
-
-### Graph Algorithms
-- **Traversal**: BFS, DFS implementations
-- **Shortest Path**: Dijkstra's, Floyd-Warshall
-- **Minimum Spanning Tree**: Kruskal's, Prim's
-- **Topological Sorting**: DFS and BFS based approaches
-
-### Advanced Data Structures
-- **Disjoint Set Union (DSU)**: Union-Find operations
-- **Segment Trees**: Range queries and updates
-- **Binary Indexed Trees**: Efficient prefix sum queries
 
 ## 🤝 Contributing
 
@@ -183,13 +162,6 @@ Contributions are welcome! Here's how you can help:
    ```
 6. **Create a Pull Request**
 
-### Code Style Guidelines
-- Use meaningful variable names
-- Add comments for complex logic
-- Include time and space complexity in comments
-- Follow Java naming conventions
-- Add sample test cases where applicable
-
 ## 📖 Resources
 
 - [LeetCode](https://leetcode.com/) - Practice problems
@@ -201,12 +173,6 @@ Contributions are welcome! Here's how you can help:
 ## 📝 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🌟 Acknowledgments
-
-- Thanks to the competitive programming community
-- LeetCode for providing excellent practice problems
-- All contributors who help improve this repository
 
 ---
 
