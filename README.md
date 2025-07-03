@@ -125,13 +125,6 @@ This repository contains well-organized Java implementations of fundamental data
 - Any Java IDE (IntelliJ IDEA, Eclipse, VS Code)
 - Basic understanding of Java programming
 
-
-### By Source
-- **LeetCode Daily Challenge**: Daily practice problems
-- **Contest Questions**: Competitive programming solutions
-- **Classic DSA**: Fundamental computer science problems
-- **Interview Prep**: Common technical interview questions
-
 ## 🤝 Contributing
 
 Contributions are welcome! Here's how you can help:
