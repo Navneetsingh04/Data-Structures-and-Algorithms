@@ -11,7 +11,7 @@ A comprehensive collection of **Data Structures and Algorithms** implementations
 
 ## 📚 Table of Contents
 
-- [Overview](#overview)
+- [Overview](#-overview)
 - [Key Features](#Key-features)
 - [Topics Covered](#topics-covered)
 - [Quick Navigation Links](#quick-navigation-links)
