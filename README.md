@@ -1,13 +1,6 @@
 # DSA (Data Structures and Algorithms) in Java 🚀
 
-
-[![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.oracle.com/java/) 
-
-[![Data Structures](https://img.shields.io/badge/Data%20Structures-blue?style=for-the-badge)](https://en.wikipedia.org/wiki/Data_structure)
-
-[![Algorithms](https://img.shields.io/badge/Algorithms-green?style=for-the-badge)](https://en.wikipedia.org/wiki/Algorithm)
-
-A comprehensive collection of **Data Structures and Algorithms** implementations in Java, featuring solutions to problems from various difficulty levels and competitive programming platforms.
+A comprehensive collection of **Data Structures and Algorithms** implementations in Java, featuring solutions to problems from various difficulty levels and from multiple programming platforms.
 
 ## 📚 Table of Contents
 
@@ -180,4 +173,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 *"The only way to learn a new programming language is by writing programs in it."* - Dennis Ritchie
 
-[![Star this repo](https://img.shields.io/badge/⭐-Star%20this%20repo-yellow?style=for-the-badge)](https://github.com/yourusername/DSA-JAVA)
+[![Star this repo](https://img.shields.io/badge/⭐-Star%20this%20repo-yellow?style=for-the-badge)](https://github.com/Navneetsingh04/Data-Structures-and-Algorithms)
