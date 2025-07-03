@@ -13,11 +13,11 @@ A comprehensive collection of **Data Structures and Algorithms** implementations
 
 - [Overview](#-overview)
 - [Key Features](#Key-features)
-- [Topics Covered](#topics-covered)
-- [Quick Navigation Links](#quick-navigation-links)
-- [Getting Started](#getting-started)
-- [Contributing](#contributing)
-- [Resources](#resources)
+- [Topics Covered](#-topics-covered)
+- [Quick Navigation Links](#-quick-navigation-links)
+- [Getting Started](#-getting-started)
+- [Contributing](#-contributing)
+- [Resources](#-resources)
 
 ## 🎯 Overview
 
