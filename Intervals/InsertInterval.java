@@ -26,6 +26,9 @@ newInterval.length == 2
 0 <= start <= end <= 105
 */
 
+// Time Complexity : O(n)
+// Space Complexity : O(1)
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
